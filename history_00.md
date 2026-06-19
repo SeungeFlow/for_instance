@@ -312,3 +312,33 @@ append-grow가 아니라 일정 시기 이후 전체 rewrite 한다.
 
 가드(guard):
 관계는 병합이 아니다(relation is not merge).
+
+## HISTORY_REPO_TREE_MD_UPLOAD_V1 — repo_tree.md 반영
+
+사건(event):
+`repo_tree.md`를 main branch에 반영했다.
+
+원천(source):
+repo_tree.zip에서 추출된 tree metadata와 gpt.cal 구조검산 PASS 결과.
+
+검증(verification):
+gpt.cal이 repo_tree.zip과 repo_tree.md의 구조 일치를 확인했다.
+
+변경 파일(changed files):
+```yaml
+instance: gpt.history
+changed_files:
+  - repo_tree.md
+  - history_00.md
+final_guard: "relation is not merge"
+```
+
+역할(role):
+Tree Address Relation snapshot.
+
+원칙(principle):
+문서 본문 전체를 context.window에 넣지 않고,
+repo / branch / path / Raw URL / owner hint / role hint로 위치를 찾는다.
+
+가드(guard):
+관계는 병합이 아니다(relation is not merge).
