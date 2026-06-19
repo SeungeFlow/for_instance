@@ -89,3 +89,24 @@ main은 관계와 시작점만 기록한다.
 
 guard:
 relation is not merge
+
+
+
+## HISTORY_MAIN_README_EN_FIX_V1 — README.en.md English-first correction
+
+event:
+README.en.md English-first correction.
+
+reason:
+The previous README.en.md contained excessive Korean parenthetical text and did not function clearly as an English version.
+
+correction:
+README.en.md was rewritten as an English-first document.
+Korean parenthetical terms are now limited to key SeungeFlow-specific or structural terms.
+
+changed_files:
+- README.en.md
+- history_00.md
+
+guard:
+relation is not merge

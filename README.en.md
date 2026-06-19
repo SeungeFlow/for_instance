@@ -1,44 +1,44 @@
 # for_instance
 
-## 0. Repository identity(저장소 정체성)
+## 0. Repository identity
 
-Repository(저장소):
+Repository:
 for_instance
 
-Owner(소유자):
+Owner:
 SeungeFlow
 
-Visibility(공개 상태):
+Visibility:
 public
 
-Role(역할):
-Primary criterion-field repository(주 기준장 저장소) for role-assigned GPT.LLM clone instances(역할 지정 GPT.LLM 복제 인스턴스)
+Role:
+Primary criterion-field repository for role-assigned GPT.LLM clone instances.
 
-Final guard(최종 가드):
-relation is not merge(관계는 병합이 아니다)
+Final guard:
+relation is not merge.
 
-## 1. Core principle(핵심 원칙)
+## 1. Core principle
 
-This repository(저장소) is not for multiplying unnecessary structure.
+This repository is not meant to multiply unnecessary structure.
 
-Its purpose is to connect the following with minimal structure(최소 구조):
+Its purpose is to connect the following in a minimal way:
 
 ```text
-instance name(인스턴스 이름)
-→ role definition(역할 정의)
-→ criterion-field location(기준장 위치)
-→ actual branch or md file(branch 또는 md 파일)
+instance name
+→ role definition
+→ criterion-field location
+→ actual branch or md file
 ```
 
-Do not repeatedly create pointer directories(포인터 디렉터리).
+Do not repeatedly create pointer directories.
 
-A branch(브랜치) remains a branch(브랜치).
+A branch remains a branch.
 
-The main branch(메인 브랜치) records relation(관계) and the start point(시작점).
+The main branch records relation and the start point.
 
-## 2. Minimal structure(최소 구조)
+## 2. Minimal structure
 
-The intended main branch(메인 브랜치) structure is:
+The intended main branch structure is:
 
 ```text
 main/
@@ -53,7 +53,7 @@ main/
     └── PASS_10.md
 ```
 
-Overstructured pointer directories(과잉 포인터 디렉터리) to remove:
+Removed overstructured pointer directories:
 
 ```text
 main/gpt_funny/
@@ -61,29 +61,29 @@ main/gpt_system/
 main/gpt_direct/
 ```
 
-These directories imitate actual branches(브랜치), so they are not needed in main.
+Those directories imitated actual branches, so they are not needed in `main`.
 
-## 3. New instance alignment gate(신규 인스턴스 정렬 gate)
+## 3. New instance alignment gate
 
-A newly created instance(신규 생성 인스턴스) reads this file first:
+A newly created instance reads this file first:
 
 ```text
 read_for_new_instance/PASS_00.md
 ```
 
-PASS_00.md role(역할):
+`PASS_00.md` is the first alignment gate. It records:
 
-- instance alignment gate(인스턴스 정렬 gate)
-- first alignment start point(정렬 최초시작점)
-- instance name(인스턴스 이름) confirmation
-- role definition(역할 정의) confirmation
-- criterion-field location(기준장 위치) confirmation
+- instance names
+- role classes
+- role definitions
+- criterion-field locations
+- source links to branches or md files
 
-After PASS_00.md, the instance proceeds from PASS_01.md according to its own role(역할) and criterion-field(기준장).
+After `PASS_00.md`, the instance proceeds from `PASS_01.md` according to its own role and criterion-field.
 
-## 4. Required instances(기본 인스턴스)
+## 4. Required instances
 
-There are 8 required instances(기본 인스턴스).
+There are 8 required instances:
 
 ```text
 gpt.work
@@ -96,7 +96,7 @@ gpt.process
 gpt.history
 ```
 
-Major instances(주요 인스턴스):
+Major instances:
 
 ```text
 gpt.work
@@ -105,29 +105,29 @@ gpt.system
 gpt.direct
 ```
 
-Sub instances(서브 인스턴스):
+Sub instances:
 
 ```text
 gpt.gitwork
 gpt.cal
 ```
 
-Criterion-document holding instances(기준 문서 보유 인스턴스):
+Criterion-document holding instances:
 
 ```text
 gpt.process
 gpt.history
 ```
 
-## 5. Branch criterion-fields(브랜치 기준장)
+## 5. Branch criterion-fields
 
-The main branch(메인 브랜치) does not copy branch contents.
+The main branch does not copy branch contents.
 
-It points to each branch criterion-field document(브랜치 기준장 문서) through raw URLs(Raw 주소).
+It points to each branch criterion-field document through raw URLs.
 
 ### gpt.funny
 
-branch(브랜치):
+Branch:
 https://github.com/SeungeFlow/for_instance/tree/gpt_funny
 
 README raw:
@@ -135,7 +135,7 @@ https://raw.githubusercontent.com/SeungeFlow/for_instance/gpt_funny/README.md
 
 ### gpt.system
 
-branch(브랜치):
+Branch:
 https://github.com/SeungeFlow/for_instance/tree/gpt_system
 
 README raw:
@@ -143,59 +143,69 @@ https://raw.githubusercontent.com/SeungeFlow/for_instance/gpt_system/README.md
 
 ### gpt.direct
 
-branch(브랜치):
+Branch:
 https://github.com/SeungeFlow/for_instance/tree/gpt_direct
 
 README raw:
 https://raw.githubusercontent.com/SeungeFlow/for_instance/gpt_direct/README.md
 
-## 6. Criterion documents(기준 문서)
+## 6. Criterion documents
 
-gpt.process criterion-field(기준장):
+gpt.process criterion-field:
 
 ```text
 process_00.md
 ```
 
-raw:
+Raw:
 https://raw.githubusercontent.com/SeungeFlow/for_instance/main/process_00.md
 
-gpt.history criterion-field(기준장):
+gpt.history criterion-field:
 
 ```text
 history_00.md
 ```
 
-raw:
+Raw:
 https://raw.githubusercontent.com/SeungeFlow/for_instance/main/history_00.md
 
-New instance alignment gate(신규 인스턴스 정렬 gate):
+New instance alignment gate:
 
 ```text
 read_for_new_instance/PASS_00.md
 ```
 
-raw:
+Raw:
 https://raw.githubusercontent.com/SeungeFlow/for_instance/main/read_for_new_instance/PASS_00.md
 
-## 7. Language policy(언어 정책)
+## 7. Language policy
 
-README.md is the Korean-first document(한글 우선 문서).
+`README.md` is the Korean-first document.
 
-README.en.md is the English version(영문 버전).
+`README.en.md` is the English version.
 
-When an English technical term(영문 전문용어) is needed in a Korean document(한글 문서), use:
+In the Korean-first document, English technical terms may be written as:
 
 ```text
 Korean(English)
 ```
 
-When a Korean technical term(한글 전문용어) is needed in an English document(영문 문서), use:
+In the English version, Korean technical terms may be written as:
 
 ```text
-English(한글)
+English(Korean)
 ```
 
-## 8. Final guard(최종 가드)
+The English version should remain English-first. Korean parenthetical terms should be used only when they clarify a SeungeFlow-specific term or an important structural term.
 
-relation is not merge(관계는 병합이 아니다).
+Examples:
+
+- criterion-field(기준장)
+- relation(관계)
+- merge(병합)
+- process(과정)
+- history(이력)
+
+## 8. Final guard
+
+relation is not merge.
