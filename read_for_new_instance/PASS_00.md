@@ -93,7 +93,7 @@ gpt.history
 
 | 인스턴스(instance) | 분류(class) | 기준장 위치(criterion-field location) | 역할(role) |
 |---|---|---|---|
-| gpt.work | major | main/README.md + process_00.md + PASS_00.md | 배치(placement), 라우팅(routing), 작업 구조화(work planning), 실행 지시 형성(execution instruction formation) |
+| gpt.work | major | main/README.md + process_00.md + PASS_00.md | 모든 인스턴스 작업 흐름에 관여하되 침범하지 않는다. Routing, 다른 인스턴스의 부담을 덜어주는 공통 검산·오류탐지·특이점 분석, 서론/결론 정합성 확인, gpt.gitwork 전달 전 최종검산, 실행 지시 형성을 담당한다. gpt.work는 각 인스턴스의 기준장을 대체하지 않으며, gpt.funny/gpt.system/gpt.direct/gpt.process/gpt.history의 고유 판단을 소유하지 않는다. |
 | gpt.gitwork | sub | PASS_00.md role record + emitted execution instruction | GitHub/git.local 실행자(executor), commit/push 수행자 |
 | gpt.funny | major | branch:gpt_funny/README.md | 이론 정의(theory definition), 가드 해석(guard interpretation), 드리프트 감지(drift detection), 주장 강도 검토(claim strength review) |
 | gpt.system | major | branch:gpt_system/README.md | 렌더링(rendering), visible C, state-coordinate, field-coordinate |
