@@ -221,3 +221,17 @@ relation is not merge
 ## 10. 최종 가드
 
 관계는 병합이 아니다(relation is not merge).
+
+
+## gpt.history 기준장 위치 갱신
+
+```yaml
+instance: gpt.history
+root_stub: history_00.md
+root_stub_raw_url: https://raw.githubusercontent.com/SeungeFlow/for_instance/main/history_00.md
+active_history_file: history/history_20260620.md
+active_history_raw_url: https://raw.githubusercontent.com/SeungeFlow/for_instance/main/history/history_20260620.md
+date_note: "20260620은 relocation/capture 기준일이며 기존 모든 사건의 실제 발생일로 단정하지 않는다."
+final_guard: "relation is not merge"
+```
+

@@ -209,3 +209,17 @@ Examples:
 ## 8. Final guard
 
 relation is not merge.
+
+
+## gpt.history Criterion Location Update
+
+```yaml
+instance: gpt.history
+root_stub: history_00.md
+root_stub_raw_url: https://raw.githubusercontent.com/SeungeFlow/for_instance/main/history_00.md
+active_history_file: history/history_20260620.md
+active_history_raw_url: https://raw.githubusercontent.com/SeungeFlow/for_instance/main/history/history_20260620.md
+date_note: "20260620 is the relocation/capture date, not necessarily the actual date of every prior event."
+final_guard: "relation is not merge"
+```
+

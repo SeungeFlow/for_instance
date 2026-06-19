@@ -3021,3 +3021,18 @@ final_guard: relation is not merge
 ## 6. Final guard
 
 관계는 병합이 아니다(relation is not merge).
+
+
+## HISTORY_DIRECTORY_RELOCATION_20260620_V1
+
+```yaml
+instance: repo_tree
+status: RELOCATION_NOTICE
+history_root_stub: history_00.md
+history_root_stub_raw_url: https://raw.githubusercontent.com/SeungeFlow/for_instance/main/history_00.md
+active_history_file: history/history_20260620.md
+active_history_raw_url: https://raw.githubusercontent.com/SeungeFlow/for_instance/main/history/history_20260620.md
+note: "repo_tree.md contains a relocation notice. A full tree snapshot rewrite may be requested later by gpt.work."
+final_guard: "relation is not merge"
+```
+
