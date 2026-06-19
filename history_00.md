@@ -1,112 +1,205 @@
 # history_00.md
 
-## 0. history identity
+## 0. 문서 정체성(document identity)
 
-repo:
+저장소(repository):
 for_instance
 
-branch:
+브랜치(branch):
 main
 
-history_file:
+파일(file):
 history_00.md
 
-role:
-initial history seed and event trace index
+역할(role):
+초기 이력 시드(initial history seed) 및 사건 흔적 색인(event trace index)
 
-guard:
-relation is not merge
+상태(status):
+ROOT_HISTORY_CRITERION_FIELD
 
-## 1. initial event
+최종 가드(final guard):
+관계는 병합이 아니다(relation is not merge)
+
+## 1. history_00의 역할
+
+`history_00.md`는 `for_instance` 저장소(repository)의 과거 사건 기록 기준장(past event record criterion-field)이다.
+
+`history_00.md`는 앞으로 할 일을 지시하지 않는다.
+
+앞으로 할 일은 `process_00.md`가 정의한다.
+
+이미 일어난 일은 `history_00.md`가 기록한다.
+
+따라서:
+
+```text
+history ≠ process
+```
+
+## 2. HISTORY_0001 — Repo.for_instance 최초 생성과 초기 branch 배치
 
 event_id:
 HISTORY_0001
 
-event:
-Repo.for_instance public repository creation and initial branch bundle placement.
+사건(event):
+Repo.for_instance public repository 생성과 초기 branch bundle 배치.
 
-source_bundles:
-- gpt_funny branch md bundle
-- gpt_system branch md bundle
-- gpt_direct branch md bundle
+원천 bundle(source bundles):
 
-branches:
-- main
-- gpt_funny
-- gpt_system
-- gpt_direct
+```text
+gpt_funny branch md bundle
+gpt_system branch md bundle
+gpt_direct branch md bundle
+```
 
-commit_push:
-to be reported by gpt.gitwork
+초기 branches:
 
-## 2. history/process boundary
+```text
+main
+gpt_funny
+gpt_system
+gpt_direct
+```
 
-history_00.md records what happened.
+commit/push:
+gpt.gitwork 보고값에 의해 기록됨.
 
-process_00.md defines how to proceed.
+의미(meaning):
+말로만 존재하던 `for_instance` 기준장이 GitHub 위의 실제 source trace로 내려왔다.
 
-history is not process.
+가드(guard):
+관계는 병합이 아니다(relation is not merge).
 
-## 3. final guard
+## 3. HISTORY_MAIN_MINIMAL_REWRITE_V1 — main 구조 단순화와 PASS_00 gate 생성
 
-relation is not merge.
-
-
-
-## HISTORY_MAIN_MINIMAL_REWRITE_V1 — main 구조 단순화와 PASS_00 gate 생성
-
-event:
+사건(event):
 main branch minimal structure rewrite and PASS_00 alignment gate creation.
 
-reason:
-The previous main branch contained pointer directories that duplicated branch relation visually:
-- gpt_funny/
-- gpt_system/
-- gpt_direct/
+이유(reason):
+이전 main branch에는 branch 관계를 시각적으로 중복하는 pointer directory가 있었다.
 
-These directories made the structure heavier than needed.
+삭제 대상:
 
-correction:
-Branch relation is recorded in README.md through branch URLs and Raw README URLs.
-The main branch does not imitate branches with pointer directories.
-The new instance alignment start point is recorded in read_for_new_instance/PASS_00.md.
+```text
+gpt_funny/
+gpt_system/
+gpt_direct/
+```
 
-changed_files:
-- README.md
-- README.en.md
-- read_for_new_instance/PASS_00.md
-- history_00.md
+이 디렉터리들은 실제 branch를 흉내내며 구조를 무겁게 만들었다.
 
-removed_from_main:
-- gpt_funny/
-- gpt_system/
-- gpt_direct/
+수정(correction):
+branch 관계는 `README.md`의 branch URL과 Raw README URL로 기록한다.
 
-principle:
+main branch는 branch를 directory로 흉내내지 않는다.
+
+신규 인스턴스 정렬 최초시작점(first alignment start point)은 다음 파일에 기록한다.
+
+```text
+read_for_new_instance/PASS_00.md
+```
+
+변경 파일(changed files):
+
+```text
+README.md
+README.en.md
+read_for_new_instance/PASS_00.md
+history_00.md
+```
+
+main에서 제거(removed from main):
+
+```text
+gpt_funny/
+gpt_system/
+gpt_direct/
+```
+
+원칙(principle):
 간략한 구조가 복잡한 검증 구조보다 강하다.
+
 branch는 branch로 둔다.
+
 main은 관계와 시작점만 기록한다.
 
-guard:
-relation is not merge
+가드(guard):
+관계는 병합이 아니다(relation is not merge).
 
+## 4. HISTORY_MAIN_README_EN_FIX_V1 — README.en.md 영문 우선 보정
 
-
-## HISTORY_MAIN_README_EN_FIX_V1 — README.en.md English-first correction
-
-event:
+사건(event):
 README.en.md English-first correction.
 
-reason:
-The previous README.en.md contained excessive Korean parenthetical text and did not function clearly as an English version.
+이유(reason):
+이전 `README.en.md`는 한국어 병기가 과도하여 영문 버전(English version)으로 명확하게 기능하지 못했다.
 
-correction:
-README.en.md was rewritten as an English-first document.
-Korean parenthetical terms are now limited to key SeungeFlow-specific or structural terms.
+수정(correction):
+`README.en.md`를 영문 우선 문서(English-first document)로 재작성했다.
 
-changed_files:
-- README.en.md
-- history_00.md
+한국어 병기는 SeungeFlow 특수 용어 또는 중요한 구조 용어에 한정했다.
 
-guard:
-relation is not merge
+변경 파일(changed files):
+
+```text
+README.en.md
+history_00.md
+```
+
+가드(guard):
+관계는 병합이 아니다(relation is not merge).
+
+## 5. HISTORY_PROCESS_HISTORY_KO_REWRITE_V1 — process_00.md / history_00.md 한글 우선 보정
+
+사건(event):
+`process_00.md`와 `history_00.md`를 한글 우선 문서(Korean-first document)로 전환한다.
+
+이유(reason):
+main branch의 기준문서인 `process_00.md`와 `history_00.md`가 영어 우선으로 남아 있었다.
+
+정책(policy):
+main의 기본 기준문서는 한글 우선이다.
+
+영문 전문용어가 필요한 경우 한글(English) 병용표기를 사용한다.
+
+변경 파일(changed files):
+
+```text
+process_00.md
+history_00.md
+```
+
+commit:
+gpt.gitwork 보고값에 의해 기록될 예정.
+
+가드(guard):
+관계는 병합이 아니다(relation is not merge).
+
+## 6. 언어 정책(language policy)
+
+`history_00.md`는 한글 우선 문서(Korean-first document)다.
+
+영문 전문용어(English technical term)가 필요하면 다음 형식을 사용한다.
+
+```text
+한글(English)
+```
+
+예시:
+
+- 저장소(repository)
+- 브랜치(branch)
+- 기준장(criterion-field)
+- 사건(event)
+- 원천(source)
+- 이력(history)
+- 과정(process)
+- 관계(relation)
+- 병합(merge)
+- 가드(guard)
+- 커밋(commit)
+- 푸시(push)
+
+## 7. 최종 가드(final guard)
+
+관계는 병합이 아니다(relation is not merge).
