@@ -149,14 +149,6 @@ process ≠ history
 
 각 branch 또는 인스턴스의 세부 process 문서는 `process_00.md`를 상속할 수 있으나, 이를 대체하거나 약화할 수 없다.
 
-```yaml
-instance: process_00
-organized_by: gpt.process
-status: INSERTED_CANDIDATE
-section: "9. 대규모 작업 분절 규정"
-final_guard: "relation is not merge"
-```
-
 ### 9.1 boot PASS와 operation PASS 구분
 
 `read_for_new_instance/PASS_00.md`부터 `PASS_10.md`까지는 신규 인스턴스 정렬 gate이다.
@@ -204,16 +196,15 @@ GitHub 변경이 발생한 PASS는 Raw URL 검증과 history 기록이 완료되
 
 외부 기억장 GitHub로 나가는 모든 실행은 다음 경로를 따른다.
 
-```text
-instance: process_00
-route: primary council → gpt.work → gpt.gitwork → GitHub → Raw URL verification → gpt.history
-```
+`primary council → gpt.work → gpt.gitwork → GitHub → Raw URL verification → gpt.history`
 
 다음 경로는 금지한다.
 
-- primary instance → gpt.gitwork 직접 접속
-- branch instance → gpt.gitwork 직접 접속
-- context.window → gpt.gitwork 직접 접속
+`primary instance → gpt.gitwork 직접 접속`
+
+`branch instance → gpt.gitwork 직접 접속`
+
+`context.window → gpt.gitwork 직접 접속`
 
 ### 9.6 HOLD 조건
 
@@ -230,7 +221,35 @@ route: primary council → gpt.work → gpt.gitwork → GitHub → Raw URL verif
 - process와 history를 혼동한 경우
 - relation을 merge로 처리한 경우
 
-### 9.7 block 표시 규정
+### 9.7 Raw URL 읽기 및 source identity 기록 규칙
+
+GitHub 문서를 읽거나 검증할 때는 GitHub 화면 주소와 Raw 주소를 구분한다.
+
+GitHub 화면 주소는 사람이 보는 주소이고, Raw 주소는 인스턴스가 실제로 읽는 원문 주소이다.
+
+앞으로 생성되는 md 문서는 가능한 경우 다음 source identity를 기록한다.
+
+```yaml
+instance: process_00
+source_identity_required:
+  repo: "<OWNER>/<REPO>"
+  branch: "<BRANCH>"
+  path: "<PATH>"
+  github_blob_url: "https://github.com/<OWNER>/<REPO>/blob/<BRANCH>/<PATH>"
+  raw_url: "https://raw.githubusercontent.com/<OWNER>/<REPO>/refs/heads/<BRANCH>/<PATH>"
+  commit_sha: "<검증 시점의 commit SHA 또는 UNKNOWN>"
+  commit_pinned_raw_url: "https://raw.githubusercontent.com/<OWNER>/<REPO>/<COMMIT_SHA>/<PATH>"
+```
+
+branch Raw URL은 최신 branch 상태를 따라가므로 나중에 내용이 바뀔 수 있다.
+
+검증 시점의 원문을 고정해야 하는 경우 commit SHA가 들어간 commit-pinned Raw URL을 함께 기록한다.
+
+GitHub 화면 주소와 Raw 주소가 다르게 보이면 Raw 주소를 우선 기준으로 삼는다.
+
+Raw 읽기 실패, commit SHA 미확인, branch/path 불일치가 발생하면 read_status를 UNKNOWN 또는 HOLD로 선언한다.
+
+### 9.8 block 표시 규정
 
 `process_00.md`에 표시되는 모든 code block, yaml block, json block, pseudocode block, structured block 내부에는 반드시 `instance` 필드를 둔다.
 
@@ -238,12 +257,11 @@ route: primary council → gpt.work → gpt.gitwork → GitHub → Raw URL verif
 
 ```yaml
 instance: process_00
-block_rule: "structured blocks must include an instance field"
-final_guard: "relation is not merge"
 ```
 
-### 9.8 final guard
+### 9.9 final guard
 
 관계는 병합이 아니다.
 
-relation is not merge.
+`relation is not merge`
+

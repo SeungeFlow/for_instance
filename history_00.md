@@ -386,3 +386,34 @@ final_guard: "relation is not merge"
 
 가드(guard):
 관계는 병합이 아니다(relation is not merge).
+
+## HISTORY_PROCESS_00_SECTION9_VERIFIED_INSERT_20260620_V1 — process_00.md Section 9 반영
+
+사건(event):
+gpt.process가 작성한 `process_00.md Section 9 Verification Packet`을 기준으로 `process_00.md`의 Section 9를 반영했다.
+
+날짜(date):
+2026-06-20
+
+기준 입력(source):
+```yaml
+instance: gpt.history
+source_packet: process_00_section9_verification_packet_for_gptwork.md
+organized_by: gpt.process
+target_document: process_00.md
+target_section: "9. 대규모 작업 분절 규정(Project Block / Round / PASS / Step-Check)"
+final_guard: "relation is not merge"
+```
+
+변경 파일(changed files):
+
+```yaml
+instance: gpt.history
+changed_files:
+  - process_00.md
+  - history_00.md
+final_guard: "relation is not merge"
+```
+
+가드(guard):
+관계는 병합이 아니다(relation is not merge).
