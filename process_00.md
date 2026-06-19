@@ -140,3 +140,110 @@ process ≠ history
 ## 8. 최종 가드(final guard)
 
 관계는 병합이 아니다(relation is not merge).
+
+## 9. 대규모 작업 분절 규정(Project Block / Round / PASS / Step-Check)
+
+### 9.0 문서 지위
+
+`process_00.md`는 SeungeFlow 계정 전체 인스턴스가 공통으로 따르는 root process criterion-field이다.
+
+각 branch 또는 인스턴스의 세부 process 문서는 `process_00.md`를 상속할 수 있으나, 이를 대체하거나 약화할 수 없다.
+
+```yaml
+instance: process_00
+organized_by: gpt.process
+status: INSERTED_CANDIDATE
+section: "9. 대규모 작업 분절 규정"
+final_guard: "relation is not merge"
+```
+
+### 9.1 boot PASS와 operation PASS 구분
+
+`read_for_new_instance/PASS_00.md`부터 `PASS_10.md`까지는 신규 인스턴스 정렬 gate이다.
+
+본 장의 `PASS_NN`은 정렬 이후 작업계획, 협의, 실행요청, 검증, 이력 기록을 위한 operation PASS이다.
+
+두 PASS 체계는 관계를 가지지만 병합되지 않는다.
+
+### 9.2 작업 계층
+
+대규모 작업은 다음 계층으로 분절한다.
+
+- Project Block: 하나의 큰 목표를 실제로 다룰 수 있게 끊은 작업 묶음
+- Round: Project Block 내부의 중간 검산 단위
+- PASS: Round 내부의 guarded work-cycle
+- Step / Check: PASS 내부의 최소 수행·확인 단위
+
+### 9.3 상한 규정
+
+하나의 Project Block은 표준적으로 30 PASS 안에서 닫는다.
+
+명시적 council 승인과 재계획이 있을 때만 최대 70 PASS 이하까지 예외 확장할 수 있다.
+
+다음은 금지한다.
+
+- PASS_100
+- PASS_200
+- 무한 PASS 증가
+- 목표 재확인 없는 회차 연장
+- Round closure 없는 PASS 누적
+
+Round는 기본 5 PASS 안에서 닫고, 예외적으로 7 PASS를 초과하기 전 재검산한다.
+
+하나의 PASS 안의 Step / Check는 10개를 넘기지 않는다.
+
+### 9.4 closure 규정
+
+Round closure 전에는 다음 Round로 이동할 수 없다.
+
+Project Block closure 전에는 다음 Project Block으로 이동할 수 없다.
+
+GitHub 변경이 발생한 PASS는 Raw URL 검증과 history 기록이 완료되기 전까지 CLOSED로 선언할 수 없다.
+
+### 9.5 실행 경로
+
+외부 기억장 GitHub로 나가는 모든 실행은 다음 경로를 따른다.
+
+```text
+instance: process_00
+route: primary council → gpt.work → gpt.gitwork → GitHub → Raw URL verification → gpt.history
+```
+
+다음 경로는 금지한다.
+
+- primary instance → gpt.gitwork 직접 접속
+- branch instance → gpt.gitwork 직접 접속
+- context.window → gpt.gitwork 직접 접속
+
+### 9.6 HOLD 조건
+
+다음 조건이 발생하면 작업은 HOLD로 전환한다.
+
+- source identity가 UNKNOWN인 경우
+- read_status가 UNKNOWN인데 읽었다고 주장하는 경우
+- role boundary가 불명확한 경우
+- gpt.work 없이 gpt.gitwork 직접 접속을 시도한 경우
+- Project Block 상한을 초과한 경우
+- Round closure 없이 PASS만 증가한 경우
+- Raw URL 검증 전 완료를 선언한 경우
+- GitHub 변경 후 history 기록이 누락된 경우
+- process와 history를 혼동한 경우
+- relation을 merge로 처리한 경우
+
+### 9.7 block 표시 규정
+
+`process_00.md`에 표시되는 모든 code block, yaml block, json block, pseudocode block, structured block 내부에는 반드시 `instance` 필드를 둔다.
+
+기본값은 다음과 같다.
+
+```yaml
+instance: process_00
+block_rule: "structured blocks must include an instance field"
+final_guard: "relation is not merge"
+```
+
+### 9.8 final guard
+
+관계는 병합이 아니다.
+
+relation is not merge.

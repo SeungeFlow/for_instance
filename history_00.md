@@ -342,3 +342,47 @@ repo / branch / path / Raw URL / owner hint / role hint로 위치를 찾는다.
 
 가드(guard):
 관계는 병합이 아니다(relation is not merge).
+
+## HISTORY_PROCESS_00_SECTION9_INSERT_V1 — 대규모 작업 분절 규정 추가
+
+사건(event):
+`process_00.md`에 Section 9 대규모 작업 분절 규정을 추가했다.
+
+정리 주체(organized_by):
+gpt.process
+
+협의 참여(participants):
+```yaml
+instance: gpt.history
+participants:
+  - gpt.funny
+  - gpt.system
+  - gpt.direct
+  - gpt.work
+  - gpt.process
+  - gpt.history
+final_guard: "relation is not merge"
+```
+
+이유(reason):
+대규모 작업이 PASS_100, PASS_200처럼 무한 회차로 증가하여 초기 목표와 guard에서 이탈하는 것을 막기 위해 Project Block / Round / PASS / Step-Check 절단 규정을 추가했다.
+
+변경 파일(changed files):
+```yaml
+instance: gpt.history
+changed_files:
+  - process_00.md
+  - history_00.md
+final_guard: "relation is not merge"
+```
+
+핵심 규정(summary):
+- boot PASS와 operation PASS를 구분한다.
+- Project Block은 표준 30 PASS 안에서 닫는다.
+- 명시적 council 승인과 재계획이 있을 때만 최대 70 PASS 이하까지 예외 확장할 수 있다.
+- PASS_100, PASS_200, 무한 PASS 증가는 금지한다.
+- 외부화는 gpt.work를 통과해야 하며 gpt.gitwork 직접 접속은 금지한다.
+- GitHub 변경 PASS는 Raw URL 검증과 history 기록 전 CLOSED로 선언할 수 없다.
+
+가드(guard):
+관계는 병합이 아니다(relation is not merge).
