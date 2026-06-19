@@ -271,3 +271,44 @@ history_00.md
 
 가드(guard):
 관계는 병합이 아니다(relation is not merge).
+
+## HISTORY_REPO_TREE_V1 — repo_tree.md 생성
+
+사건(event):
+`repo_tree.md`를 main branch에 생성했다.
+
+이유(reason):
+context.window의 불필요한 데이터 밀도를 높이지 않기 위해,
+문서 본문이 아니라 Tree 위치와 Raw Address Relation을 기록하는 snapshot이 필요했다.
+
+생성 파일(created file):
+
+```text
+repo_tree.md
+```
+
+변경 파일(changed file):
+
+```text
+history_00.md
+```
+
+권한(authority):
+gpt.work
+
+실행자(executor):
+gpt.gitwork
+
+역할(role):
+Tree Address Relation snapshot
+
+원칙(principle):
+문서 내용은 GitHub에 둔다.
+context.window에는 위치와 관계를 둔다.
+필요할 때만 Raw 문서를 읽는다.
+
+갱신 방식(update policy):
+append-grow가 아니라 일정 시기 이후 전체 rewrite 한다.
+
+가드(guard):
+관계는 병합이 아니다(relation is not merge).
