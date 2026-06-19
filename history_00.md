@@ -238,3 +238,36 @@ main은 관계와 시작점만 기록한다.
 
 가드(guard):
 관계는 병합이 아니다(relation is not merge).
+
+
+
+## HISTORY_READ_FOR_NEW_INSTANCE_PASS01_10_REWRITE_V1 — PASS_01~PASS_10 boot sequence 재정렬
+
+사건(event):
+`read_for_new_instance/PASS_01.md`부터 `PASS_10.md`까지 신규 인스턴스 boot sequence를 재작성했다.
+
+이유(reason):
+기존 PASS_01~PASS_10은 한 줄 초안 형태였고, PASS_00.md 이후의 정렬 흐름을 충분히 반영하지 못했다.
+
+수정(correction):
+PASS_00.md 이후 이어지는 신규 인스턴스 정렬 절차를 한글 우선 문서로 재작성했다.
+
+변경 파일(changed files):
+
+```text
+read_for_new_instance/README.md
+read_for_new_instance/PASS_01.md
+read_for_new_instance/PASS_02.md
+read_for_new_instance/PASS_03.md
+read_for_new_instance/PASS_04.md
+read_for_new_instance/PASS_05.md
+read_for_new_instance/PASS_06.md
+read_for_new_instance/PASS_07.md
+read_for_new_instance/PASS_08.md
+read_for_new_instance/PASS_09.md
+read_for_new_instance/PASS_10.md
+history_00.md
+```
+
+가드(guard):
+관계는 병합이 아니다(relation is not merge).
