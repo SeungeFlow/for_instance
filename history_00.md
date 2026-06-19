@@ -203,3 +203,38 @@ gpt.gitwork 보고값에 의해 기록될 예정.
 ## 7. 최종 가드(final guard)
 
 관계는 병합이 아니다(relation is not merge).
+
+## HISTORY_BRANCH_RELATION_INDEX_REMOVAL_V1 — branch_relation_index.md 삭제
+
+사건(event):
+`branch_relation_index.md`를 main branch에서 삭제했다.
+
+이유(reason):
+`branch_relation_index.md`는 이전 과잉 구조의 잔재였다.
+
+현재 최소 구조에서는 branch 관계와 인스턴스 기준장 위치를 다음 파일들이 이미 담당한다.
+
+```text
+README.md
+read_for_new_instance/PASS_00.md
+담당 파일:
+- README.md
+- read_for_new_instance/PASS_00.md
+
+따라서 `branch_relation_index.md`는 중복 파일이다.
+
+삭제 파일(deleted file):
+- branch_relation_index.md
+
+변경 파일(changed file):
+- history_00.md
+
+원칙(principle):
+간략한 구조가 복잡한 검증 구조보다 강하다.
+
+branch는 branch로 둔다.
+
+main은 관계와 시작점만 기록한다.
+
+가드(guard):
+관계는 병합이 아니다(relation is not merge).
