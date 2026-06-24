@@ -2,90 +2,93 @@
 
 ## 0. 저장소 정체성(repository identity)
 
-저장소(repository):
-for_instance
+```yaml
+repository: for_instance
+owner: SeungeFlow
+visibility: public
+role: primary criterion-field repository for role-assigned GPT.LLM instances
+root_planning_instance: gpt.baseline
+current_project_plan: project_plan_00.md
+```
 
-소유자(owner):
-SeungeFlow
+이 저장소는 역할이 지정된 인스턴스가 자신의 이름·역할·기준장·source 위치를 확인하고, 현재 계획에 따라 작업을 이어가기 위한 주 기준장 저장소다.
 
-공개 상태(visibility):
-public
+`baseline_00.md`는 사용자가 필요할 때 제공하는 private understanding/reference criterion이며 이 저장소의 upload 대상이 아니다.
+`gpt.baseline`이 공개 작업에 제공하는 산출물은 `project_plan_00.md`다.
 
-역할(role):
-역할 지정 GPT.LLM 복제 인스턴스(role-assigned GPT.LLM clone instance)를 위한 주 기준장 저장소(primary criterion-field repository)
+---
 
-최종 가드(final guard):
-관계는 병합이 아니다(relation is not merge)
+## 1. 핵심 원칙(core principles)
 
-## 1. 핵심 원칙(core principle)
-
-이 저장소(repository)는 구조를 복잡하게 만들기 위한 저장소가 아니다.
+```text
+계획서는 설계와 실행보다 먼저 놓인다.
+```
 
 이 저장소의 목적은 다음을 간략하게 연결하는 것이다.
 
 ```text
-인스턴스 이름(instance name)
-→ 역할 정의(role definition)
-→ 기준장 위치(criterion-field location)
-→ 실제 branch 또는 md 파일
+프로젝트 계획
+>>> 인스턴스 이름
+>>> 역할 정의
+>>> 기준장 위치
+>>> source / projection 위치
+>>> 현재 작업지시
 ```
 
-복잡한 포인터 디렉터리(pointer directory)를 반복 생성하지 않는다.
+main 브랜치는 branch 내용을 복사하지 않는다.
+main 브랜치는 관계·시작점·현재 계획을 기록한다.
 
-branch는 branch로 둔다.
+---
 
-main 브랜치(main branch)는 관계와 시작점을 기록한다.
+## 2. 신규 인스턴스 진입 경로
 
-## 2. 최소 구조(minimal structure)
+저장소를 통해 들어오는 신규 인스턴스의 진입 경로는 다음과 같다.
 
-현재 main 브랜치(main branch)의 기준 구조는 다음이다.
+```text
+README.md
+>>> read_for_new_instance/README.md
+>>> read_for_new_instance/PASS_00.md
+>>> project_plan_00.md
+>>> PASS_01.md ... PASS_10.md
+```
+
+`PASS_00.md`는 boot sequence 안의 최초 역할정렬 gate다.
+
+직접 `PASS_00.md`를 전달받은 인스턴스는 PASS_00의 지시에 따라 root README와 현재 계획을 확인한다.
+
+---
+
+## 3. main의 최소 구조(minimal structure)
 
 ```text
 main/
 ├── README.md
 ├── README.en.md
+├── project_plan_00.md
 ├── process_00.md
 ├── history_00.md
+├── paper_ko.md
+├── paper_en.md
+├── paper_alignment_map.md
 └── read_for_new_instance/
+    ├── README.md
     ├── PASS_00.md
     ├── PASS_01.md
     ├── ...
     └── PASS_10.md
 ```
 
-삭제 대상이 되는 과잉 구조(overstructured pointer directories):
+복잡한 pointer directory를 반복 생성하지 않는다.
+실제 branch는 branch로 보존한다.
 
-```text
-main/gpt_funny/
-main/gpt_system/
-main/gpt_direct/
-```
-
-위 디렉터리는 실제 branch를 흉내내는 포인터 디렉터리(pointer directory)이므로 main에 둘 필요가 없다.
-
-## 3. 신규 인스턴스 정렬 gate
-
-신규 생성 인스턴스(newly created instance)는 가장 먼저 다음 파일을 읽는다.
-
-```text
-read_for_new_instance/PASS_00.md
-```
-
-PASS_00.md의 역할:
-
-- 인스턴스 정렬 gate(instance alignment gate)
-- 정렬 최초시작점(first alignment start point)
-- 인스턴스 이름(instance name) 확인
-- 역할 정의(role definition) 확인
-- 기준장 위치(criterion-field location) 확인
-
-PASS_00.md 이후에는 각자의 역할과 기준장에 따라 PASS_01.md부터 진행한다.
+---
 
 ## 4. 기본 인스턴스(required instances)
 
-필요한 기본 인스턴스(required instances)는 8개다.
+필요한 기본 인스턴스는 9개다.
 
 ```text
+gpt.baseline
 gpt.work
 gpt.gitwork
 gpt.funny
@@ -96,112 +99,129 @@ gpt.process
 gpt.history
 ```
 
-주요 인스턴스(major instances):
+### 역할 분류
 
-```text
-gpt.work
-gpt.funny
-gpt.system
-gpt.direct
+```yaml
+root_planning:
+  - gpt.baseline
+major:
+  - gpt.work
+  - gpt.funny
+  - gpt.system
+  - gpt.direct
+executor:
+  - gpt.gitwork
+verification:
+  - gpt.cal
+criterion_holders:
+  - gpt.process
+  - gpt.history
 ```
 
-서브 인스턴스(sub instances):
+상세 역할은 `read_for_new_instance/PASS_00.md`에서 확인한다.
+
+---
+
+## 5. 역할관계 요약
 
 ```text
-gpt.gitwork
-gpt.cal
+gpt.baseline = 계획서 작성과 업무배분
+gpt.funny = 이론·가드·주장강도
+gpt.system = rendering·state-coordinate·field-coordinate
+gpt.direct = direction·source relation·DB framework candidate
+gpt.process = PASS/Round/Step 본류 유지
+gpt.history = history/provenance/source boundary
+gpt.cal = 세부 구조검산과 mismatch 표
+gpt.work = routing과 최종 gate
+gpt.gitwork = 승인된 git/GitHub 실행
 ```
 
-기준 문서 보유 인스턴스(criterion-document holding instances):
+계획 작성·검산·최종판단·실행은 서로 다른 역할이다.
 
-```text
-gpt.process
-gpt.history
-```
+---
 
-## 5. branch 기준장(raw link)
-
-main 브랜치(main branch)는 branch 내용을 복사하지 않는다.
-
-대신 아래 Raw 주소(raw URL)를 통해 각 branch의 기준장 문서(criterion-field document)를 가리킨다.
+## 6. branch 기준장(raw links)
 
 ### gpt.funny
 
-branch:
-https://github.com/SeungeFlow/for_instance/tree/gpt_funny
-
-README raw:
-https://raw.githubusercontent.com/SeungeFlow/for_instance/gpt_funny/README.md
+- branch: https://github.com/SeungeFlow/for_instance/tree/gpt_funny
+- README raw: https://raw.githubusercontent.com/SeungeFlow/for_instance/gpt_funny/README.md
 
 ### gpt.system
 
-branch:
-https://github.com/SeungeFlow/for_instance/tree/gpt_system
-
-README raw:
-https://raw.githubusercontent.com/SeungeFlow/for_instance/gpt_system/README.md
+- branch: https://github.com/SeungeFlow/for_instance/tree/gpt_system
+- README raw: https://raw.githubusercontent.com/SeungeFlow/for_instance/gpt_system/README.md
 
 ### gpt.direct
 
-branch:
-https://github.com/SeungeFlow/for_instance/tree/gpt_direct
+- branch: https://github.com/SeungeFlow/for_instance/tree/gpt_direct
+- README raw: https://raw.githubusercontent.com/SeungeFlow/for_instance/gpt_direct/README.md
 
-README raw:
-https://raw.githubusercontent.com/SeungeFlow/for_instance/gpt_direct/README.md
+---
 
-## 6. 기준 문서(criterion documents)
+## 7. root 및 criterion documents
 
-gpt.process 기준장(criterion-field):
+| 역할 | 문서 |
+|---|---|
+| 현재 프로젝트 계획 | `project_plan_00.md` |
+| gpt.process 기준장 | `process_00.md` |
+| gpt.history root stub | `history_00.md` |
+| 신규 인스턴스 역할정렬 gate | `read_for_new_instance/PASS_00.md` |
+| 신규 인스턴스 boot map | `read_for_new_instance/README.md` |
 
-```text
-process_00.md
-```
+`gpt.baseline`의 private criterion인 `baseline_00.md`는 사용자가 명시적으로 제공할 때만 읽는다.
+파일을 제공받지 않은 인스턴스는 그 내용을 추정하지 않는다.
 
-raw:
-https://raw.githubusercontent.com/SeungeFlow/for_instance/main/process_00.md
+---
 
-gpt.history 기준장(criterion-field):
-
-```text
-history_00.md
-```
-
-raw:
-https://raw.githubusercontent.com/SeungeFlow/for_instance/main/history_00.md
-
-신규 인스턴스 정렬 gate(instance alignment gate):
+## 8. 현재 baseline paper 세트
 
 ```text
-read_for_new_instance/PASS_00.md
+paper_ko.md = Korean controlling source master
+paper_en.md = sentence-order-preserving controlled translation
+paper_alignment_map.md = KO–EN alignment verification artifact
 ```
 
-raw:
-https://raw.githubusercontent.com/SeungeFlow/for_instance/main/read_for_new_instance/PASS_00.md
+이 세 문서는 자본시장 분석 이전의 criterion-field를 제시한다.
+직접 source corpus인 README 7개와 upstream Tree trace를 대체하지 않는다.
 
-## 7. 언어 정책(language policy)
+paper는 모든 신규 인스턴스의 자동 boot 필수문서가 아니다.
+현재 `project_plan_00.md` 또는 역할지시가 요구할 때 읽는다.
 
-README.md는 한글 우선 문서(Korean-first document)다.
+---
 
-README.en.md는 영문 버전(English version) 문서다.
+## 9. 실행 경계
 
-한글 문서(Korean document)에서 영문 전문용어(English technical term)가 필요하면 다음 형식을 사용한다.
+`gpt.gitwork`만 승인된 emitted execution instruction을 따라 commit/push를 수행한다.
 
 ```text
-한글(English)
+계획 ≠ 실행
+검산 ≠ 실행
+최종 gate ≠ 실행
 ```
 
-영문 문서(English document)에서 한글 전문용어(Korean technical term)가 필요하면 다음 형식을 사용한다.
+`README.en.md`의 controlled update는 한글 source 수정 후 별도 상태로 수행한다.
+동기화되지 않은 상태를 완료로 표시하지 않는다.
 
-```text
-English(한글)
+```yaml
+README_language_sync:
+  controlling_source: README.md
+  README_en_status: HOLD_UNTIL_CONTROLLED_UPDATE
+  conflict_rule: Korean source controls until alignment verification passes
 ```
 
-## 8. 최종 가드(final guard)
+---
 
-관계는 병합이 아니다(relation is not merge).
+## 10. 언어 정책(language policy)
 
+- `README.md`: Korean-first source
+- `README.en.md`: controlled English version
+- 한글 전문어와 영어 전문어가 하나의 단어로 완전히 대응하지 않으면 source term과 controlled term을 함께 보존한다.
+- 번역은 relation이며 merge가 아니다.
 
-## gpt.history 기준장 위치 갱신
+---
+
+## 11. gpt.history 기준장 위치
 
 ```yaml
 instance: gpt.history
@@ -209,7 +229,15 @@ root_stub: history_00.md
 root_stub_raw_url: https://raw.githubusercontent.com/SeungeFlow/for_instance/main/history_00.md
 active_history_file: history/history_20260620.md
 active_history_raw_url: https://raw.githubusercontent.com/SeungeFlow/for_instance/main/history/history_20260620.md
-date_note: "20260620은 relocation/capture 기준일이며 기존 모든 사건의 실제 발생일로 단정하지 않는다."
-final_guard: "relation is not merge"
+date_note: 20260620은 relocation/capture 기준일이며 기존 모든 사건의 실제 발생일로 단정하지 않는다.
 ```
 
+---
+
+# Final Guard
+
+```text
+relation is not merge.
+structure is not isolate.
+I am going to ?
+```
