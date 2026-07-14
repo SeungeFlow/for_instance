@@ -1,0 +1,56 @@
+instance_assignment_response:
+  request_id: REQ-EXAMPLE-001
+  assignments:
+    - instance_id: rogi
+      profile: XYZ
+      function_ids:
+        - source_extension
+        - relation_design
+      mutation_authority: false
+      prohibited_actions:
+        - remote_mutation
+    - instance_id: gpt.work
+      profile: YZT
+      function_ids:
+        - instance_alignment
+        - process_handoff
+      mutation_authority: false
+      prohibited_actions:
+        - unapproved_remote_mutation
+    - instance_id: gpt.github
+      profile: XZT
+      function_ids:
+        - repository_materialization
+      mutation_authority: approval_required
+      prohibited_actions:
+        - force_push
+  coverage:
+    seats:
+      - X
+      - Y
+      - Z
+      - T
+    result: COMPLETE
+  overlap_map:
+    rogi__gpt_work:
+      shared:
+        - Y
+        - Z
+    gpt_work__gpt_github:
+      shared:
+        - Z
+        - T
+    rogi__gpt_github:
+      shared:
+        - X
+        - Z
+  handoff_order:
+    - rogi
+    - gpt.work
+    - gpt.github
+    - auditor
+  independent_verifier:
+    profile:
+      - Z
+      - XZ
+  unresolved_constraints: []

@@ -1,0 +1,9 @@
+repository: for_instance
+role: AI_INSTANCE_ALIGNMENT_REPOSITORY
+state: FUNCTIONAL_INITIAL_STRUCTURE
+default_branch: main
+seat_model:
+  axes: [X, Y, Z, T]
+  profile_count: 15
+relation_interface: ACTIVE
+mutation_authority: DECLARED

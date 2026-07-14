@@ -1,0 +1,11 @@
+seat:
+  id: T
+  name: Time_Process_Transition
+  responsibilities:
+    - 시간상태
+    - Process 순서
+    - Handoff
+    - 상태전이
+    - 다음 작업 연결
+  note: T는 git이 아니다. git은 선택 Adapter다.
+  extensible: true

@@ -1,0 +1,9 @@
+seat:
+  id: Y
+  name: Relation_Interpretation
+  responsibilities:
+    - 관계해석
+    - 구조합성
+    - Relation Candidate 생성
+    - 결과 설명
+  extensible: true

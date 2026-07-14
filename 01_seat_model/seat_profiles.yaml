@@ -1,0 +1,32 @@
+seat_profiles:
+  - profile: X
+    seats: [X]
+  - profile: Y
+    seats: [Y]
+  - profile: Z
+    seats: [Z]
+  - profile: T
+    seats: [T]
+  - profile: XY
+    seats: [X, Y]
+  - profile: XZ
+    seats: [X, Z]
+  - profile: XT
+    seats: [X, T]
+  - profile: YZ
+    seats: [Y, Z]
+  - profile: YT
+    seats: [Y, T]
+  - profile: ZT
+    seats: [Z, T]
+  - profile: XYZ
+    seats: [X, Y, Z]
+  - profile: XYT
+    seats: [X, Y, T]
+  - profile: XZT
+    seats: [X, Z, T]
+  - profile: YZT
+    seats: [Y, Z, T]
+  - profile: XYZT
+    seats: [X, Y, Z, T]
+profile_count: 15

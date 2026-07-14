@@ -1,0 +1,11 @@
+test:
+  id: A
+  description: 하나의 Instance가 X·Y·Z·T를 모두 점유
+  instances:
+    - instance_id: gpt.xyzt
+      profile: XYZT
+  required_seats_covered: true
+  profiles_are_valid: true
+  handoff_order_present: true
+  independent_verifier_present_when_required: true
+  mutation_authority_declared: true

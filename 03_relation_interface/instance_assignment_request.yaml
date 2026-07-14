@@ -1,0 +1,27 @@
+instance_assignment_request:
+  request_id: REQ-EXAMPLE-001
+  task_id: TASK-EXAMPLE-001
+  function_ids:
+    - example_function
+  active_seat_schema:
+    X: Source_Input
+    Y: Relation_Interpretation
+    Z: Structure_Verification
+    T: Time_Process_Transition
+  required_coverage:
+    - X
+    - Y
+    - Z
+    - T
+  required_capabilities:
+    - source_reading
+    - relation_interpretation
+    - evidence_verification
+    - process_handoff
+  independent_verification: true
+  maximum_instances: 4
+  maximum_handoffs: 4
+  mutation_authority:
+    required: false
+  prohibited_actions:
+    - unapproved_remote_mutation

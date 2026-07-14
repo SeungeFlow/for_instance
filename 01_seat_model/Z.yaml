@@ -1,0 +1,9 @@
+seat:
+  id: Z
+  name: Structure_Verification
+  responsibilities:
+    - 구조확인
+    - Schema 읽기
+    - Evidence 확인
+    - 비교·독립검산
+  extensible: true

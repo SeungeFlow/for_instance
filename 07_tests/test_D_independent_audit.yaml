@@ -1,0 +1,18 @@
+test:
+  id: D
+  description: Core Team에 gpt.z 독립 Auditor 추가
+  instances:
+    - instance_id: rogi
+      profile: XYZ
+    - instance_id: gpt.work
+      profile: YZT
+    - instance_id: gpt.github
+      profile: XZT
+    - instance_id: gpt.z
+      profile: Z
+  independent_verifier: gpt.z
+  required_seats_covered: true
+  profiles_are_valid: true
+  handoff_order_present: true
+  independent_verifier_present_when_required: true
+  mutation_authority_declared: true

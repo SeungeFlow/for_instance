@@ -1,0 +1,24 @@
+instance_handoff:
+  handoff_id: HANDOFF-EXAMPLE-001
+  from_instance: gpt.work
+  from_profile: YZT
+  to_instance: gpt.github
+  to_profile: XZT
+  completed_functions:
+    - for_instance_internal_design
+  input_seed_ids:
+    - LOGI-VOL-08
+  output_seed_ids:
+    - FOR-INSTANCE-DIRECTIVE-001
+  applied_guards:
+    - function_is_not_instance
+    - instance_is_not_seat
+    - relation_is_not_merge
+  unresolved_questions: []
+  receiver_contract:
+    required_action:
+      - materialize_repository
+      - push_to_github
+    prohibited_action:
+      - redesign_theory
+      - force_push

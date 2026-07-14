@@ -1,0 +1,13 @@
+capabilities:
+  source_reading:
+    preferred_seats: [X]
+  relation_interpretation:
+    preferred_seats: [Y]
+  evidence_verification:
+    preferred_seats: [Z]
+  process_handoff:
+    preferred_seats: [T]
+  repository_materialization:
+    preferred_seats: [X, Z, T]
+  independent_audit:
+    preferred_seats: [Z, XZ]

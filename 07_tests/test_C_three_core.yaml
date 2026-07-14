@@ -1,0 +1,15 @@
+test:
+  id: C
+  description: gpt.xyz + gpt.yzt + gpt.xzt로 설계·정렬·구현을 분리
+  instances:
+    - instance_id: gpt.xyz
+      profile: XYZ
+    - instance_id: gpt.yzt
+      profile: YZT
+    - instance_id: gpt.xzt
+      profile: XZT
+  required_seats_covered: true
+  profiles_are_valid: true
+  handoff_order_present: true
+  independent_verifier_present_when_required: true
+  mutation_authority_declared: true

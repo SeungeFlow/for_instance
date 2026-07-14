@@ -1,0 +1,20 @@
+current_assignment:
+  assignment_id: ASSIGN-CURRENT-001
+  request_id: REQ-EXAMPLE-001
+  state: READY
+  assignments:
+    - instance_id: rogi
+      profile: XYZ
+    - instance_id: gpt.work
+      profile: YZT
+    - instance_id: gpt.github
+      profile: XZT
+    - instance_id: auditor
+      profile: Z
+  required_seats_covered: true
+  handoff_order:
+    - rogi
+    - gpt.work
+    - gpt.github
+    - auditor
+  mutation_authority_declared: true

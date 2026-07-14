@@ -1,0 +1,20 @@
+team:
+  team_id: INITIAL-CORE-TEAM
+  members:
+    - instance_id: rogi
+      profile: XYZ
+    - instance_id: gpt.work
+      profile: YZT
+    - instance_id: gpt.github
+      profile: XZT
+    - instance_id: auditor
+      profile: Z
+  coverage: [X, Y, Z, T]
+  overlap:
+    - members: [rogi, gpt.work]
+      seats: [Y, Z]
+    - members: [gpt.work, gpt.github]
+      seats: [Z, T]
+    - members: [rogi, gpt.github]
+      seats: [X, Z]
+  independent_verifier: auditor

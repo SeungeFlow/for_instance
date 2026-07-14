@@ -1,0 +1,11 @@
+assignment_example:
+  name: single_X
+  instances:
+    - instance_id: gpt.x
+      profile: X
+  required_seats: [X]
+  required_seats_covered: true
+  profiles_are_valid: true
+  handoff_order: [gpt.x]
+  independent_verifier_present_when_required: true
+  mutation_authority_declared: true

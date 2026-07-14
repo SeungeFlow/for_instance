@@ -1,0 +1,22 @@
+instances:
+  - instance_id: rogi
+    provisional_profile: XYZ
+    role:
+      - source_extension
+      - relation_design
+  - instance_id: gpt.work
+    provisional_profile: YZT
+    role:
+      - instance_alignment
+      - process_handoff
+  - instance_id: gpt.github
+    provisional_profile: XZT
+    role:
+      - repository_materialization
+  - instance_id: auditor
+    provisional_profile:
+      - Z
+      - XZ
+    role:
+      - independent_audit
+profile_assignment_is_provisional: true

@@ -1,0 +1,15 @@
+test:
+  id: B
+  description: gpt.xyz와 gpt.yzt가 공통 YZ와 고유 X·T를 사용
+  instances:
+    - instance_id: gpt.xyz
+      profile: XYZ
+    - instance_id: gpt.yzt
+      profile: YZT
+  shared_seats: [Y, Z]
+  unique_seats: [X, T]
+  required_seats_covered: true
+  profiles_are_valid: true
+  handoff_order_present: true
+  independent_verifier_present_when_required: true
+  mutation_authority_declared: true

@@ -1,0 +1,9 @@
+seat:
+  id: X
+  name: Source_Input
+  responsibilities:
+    - Source 읽기
+    - Package 읽기
+    - Question 입력
+    - 입력경계 확인
+  extensible: true
