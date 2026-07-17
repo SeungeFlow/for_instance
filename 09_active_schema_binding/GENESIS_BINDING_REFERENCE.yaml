@@ -1,0 +1,7 @@
+canonical_repository: "SeungeFlow/Relation"
+branch: "main"
+path: "05_hash_relation_track_registry/"
+record_type: "HASH_RELATION_TRACK_DB_GENESIS"
+record_id: "HASH_RELATION_TRACK_DB_GENESIS-HRTDB-V1-0001"
+storage_commit: "b249a40e368453036de14499d3e2e061ac4e2dbd"
+version_doi: "10.5281/zenodo.21410576"
