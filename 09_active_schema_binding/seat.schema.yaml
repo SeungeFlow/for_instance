@@ -1,0 +1,220 @@
+schema_name: active_schema_seat_definition_contract
+schema_version: "1.0.0"
+document_role: FOR_INSTANCE_SEAT_DEFINITION_SCHEMA
+conceptual_root: Hash_Relation_Track_DB
+
+principles:
+  - Seat is not an instance.
+  - Seat Definition is not Seat Occupation.
+  - Seat Definition defines an operational position.
+  - Seat Occupation is a runtime relation record.
+  - One instance may occupy multiple seats sequentially.
+  - Multiple instances may independently use one seat definition.
+  - Internal reasoning method remains adaptive.
+  - External result, evidence and handoff remain observable.
+  - Coordinate view is optional.
+  - Coordinate view does not define runtime population.
+  - Existing for_instance structures are preserved.
+  - This contract binds future use without rewriting existing initial structure.
+
+canonical_position:
+  repository: SeungeFlow/for_instance
+  branch: main
+  path: 09_active_schema_binding/
+
+existing_structure_relation:
+  existing_seat_model:
+    path: 01_seat_model/
+    status: PRESERVED_FUNCTIONAL_INITIAL_MODEL
+
+  existing_relation_interface:
+    path: 03_relation_interface/
+    status: PRESERVED_EXISTING_INTERFACE
+
+  existing_assignment:
+    path: 04_assignment/
+    status: PRESERVED_EXISTING_HISTORY
+
+  relation_type: BINDS_WITHOUT_REWRITING
+
+reference_contract:
+  required_fields:
+    - namespace
+    - object_type
+    - object_id
+
+  optional_position_fields:
+    - repository
+    - branch
+    - path
+
+  allowed_namespaces:
+    - ACTIVE_SCHEMA
+    - BRIDGE
+    - FOR_INSTANCE
+    - RELATION
+    - GIT
+    - ZENODO
+
+seat_definition:
+  required:
+    - seat_definition_id
+    - schema_version
+    - seat_class
+    - accepted_input
+    - observation_boundary
+    - relation_scope
+    - allowed_operation
+    - authority_boundary
+    - expected_output
+    - evidence_requirement
+    - handoff_relation
+    - root_reference
+    - declared_state
+
+  template:
+    seat_definition_id: ""
+    schema_version: "1.0.0"
+
+    seat_class:
+      value: ""
+      allowed_core_classes:
+        - DATA
+        - FUNCTION
+        - RESULT
+        - TRANSITION
+      extension_allowed: true
+
+    accepted_input:
+      object_classes: []
+      semantic_roles: []
+      accepted_reference_namespaces: []
+      required_validation_states: []
+      root_binding_required: true
+
+    observation_boundary:
+      permitted_sources: []
+      excluded_sources: []
+
+      before_position_access:
+        default: POINTER_ONLY
+        recursive_search: false
+        explicit_source_position_required: true
+
+      unrelated_branch_reading: false
+      hidden_relation_discovery: false
+
+    relation_scope:
+      readable_record_types: []
+      producible_result_types: []
+      writable_record_types: []
+
+    allowed_operation:
+      operations: []
+      internal_method_fixed: false
+      private_reasoning_storage_required: false
+
+    authority_boundary:
+      github_mutation: false
+      linux_mutation: false
+      zenodo_publication: false
+      external_record_creation: false
+      mutation_authorization_required: true
+      publication_authorization_required: true
+      authorization_source: HUMAN_NETWORKING_BRIDGE
+
+    expected_output:
+      object_classes: []
+      semantic_roles: []
+      output_position_refs: []
+      required_external_summary: true
+
+    evidence_requirement:
+      required: true
+      accepted_evidence_types:
+        - SHA256
+        - GIT_COMMIT
+        - GIT_TREE
+        - GIT_BLOB
+        - SOURCE_REFERENCE
+        - API_OBSERVATION
+        - INDEPENDENT_VERIFICATION
+        - CLOSURE_SNAPSHOT
+
+    handoff_relation:
+      event_type: RESULT_TO_NEXT_DATA
+      target_seat_definition_refs: []
+      handoff_requires_validation: true
+      result_object_reference_required: true
+
+    root_reference:
+      publication:
+        namespace: ZENODO
+        object_type: DOI
+        object_id_resolution: FROM_PUBLICATION_RECORD
+
+      package:
+        namespace: ACTIVE_SCHEMA
+        object_type: PACKAGE_SHA256
+        object_id_resolution: FROM_ZIP_FILENAME
+
+      genesis_binding:
+        namespace: RELATION
+        object_type: HASH_RELATION_TRACK_DB_GENESIS
+        object_id_resolution: FROM_RELATION_REGISTRY
+
+    coordinate_view:
+      enabled: false
+      required_for_conformance: false
+
+      candidate_indexes:
+        data:
+          - x
+          - y
+          - z
+
+        function:
+          - xz
+          - yz
+          - xy
+
+        result:
+          - xyz
+
+        transition:
+          - t
+
+      rules:
+        - Coordinate index is not seat identity.
+        - Coordinate index is not fixed runtime population.
+        - A seat remains interpretable when coordinate_view is disabled.
+
+    declared_state:
+      validation: CANDIDATE
+      lifecycle: CURRENT
+      closure: OPEN
+
+seat_occupation_reference:
+  canonical_schema:
+    file: Active_Schema/relation.schema.yaml
+    record_type: SEAT_OCCUPATION
+
+  canonical_runtime_position:
+    repository: SeungeFlow/Relation
+    branch: main
+    path: 05_hash_relation_track_registry/
+
+  rules:
+    - Seat Occupation fields are not duplicated in this file.
+    - Existing assignment history is not automatically converted.
+    - New runtime occupation events are created only after the new registry begins.
+    - Private chain-of-thought is not stored.
+
+validation_rules:
+  - seat_definition_id is stable within one Active_Schema lineage.
+  - seat_definition_id is distinct from Relation runtime record_id.
+  - expected_output is compatible with handoff_relation.
+  - authority_boundary cannot grant external mutation by itself.
+  - observation_boundary cannot authorize recursive before_position discovery.
+  - coordinate_view cannot be required for V1 conformance.
+  - existing for_instance initial structure cannot be silently rewritten.

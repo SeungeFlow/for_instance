@@ -1,0 +1,18 @@
+generated_from:
+  version_doi: "10.5281/zenodo.21410576"
+  package_sha256: "42bb7089e5cdfb52eb951b3bb53613c7ed75168337c2a76524a0e47b5eefb88c"
+  manifest_digest: "5d1565212ef510ffe5576dc80449d928c0b1bfbe05cce24e12ee4426bbd18353"
+  schema_version: "1.0.0"
+contract:
+  event_type: "RESULT_TO_NEXT_DATA"
+  reference_fields:
+    - "namespace"
+    - "object_type"
+    - "object_id"
+  relation_registry:
+    repository: "SeungeFlow/Relation"
+    branch: "main"
+    path: "05_hash_relation_track_registry/"
+  private_chain_of_thought_storage: false
+  observable_result_and_evidence_required: true
+  mutation_authorization_source: "HUMAN_NETWORKING_BRIDGE"
