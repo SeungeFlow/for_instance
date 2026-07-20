@@ -58,3 +58,16 @@ X, Y, Z, T, XY, XZ, XT, YZ, YT, ZT, XYZ, XYT, XZT, YZT, XYZT
 - Dual XY: `04_assignment/examples/dual_XY.yaml`
 - Triple XYZ: `04_assignment/examples/triple_XYZ.yaml`
 - Full XYZT: `04_assignment/examples/full_XYZT.yaml`
+
+<!-- ACTIVE_SCHEMA_V2_BINDING_START -->
+## Active_Schema Version 2.0.0 System Binding
+
+- Version DOI: https://doi.org/10.5281/zenodo.21453793
+- Exact ZIP SHA-256: `0b0317dadfd333c151c9b3f5e4c930d048c76e39fe037914f01ae9767c6d2b30`
+- Binding: `09_active_schema_binding/versions/2.0.0/`
+- Seat projection: `01_seat_model/active_schema_v2/`
+- Operation projection: `06_operation/active_schema_v2/`
+- Full body mirror: `SeungeFlow/Relation@main:06_active_schema/releases/2.0.0/Active_Schema/`
+
+The full Active_Schema body and Track DB payloads are not stored in for_instance.
+<!-- ACTIVE_SCHEMA_V2_BINDING_END -->

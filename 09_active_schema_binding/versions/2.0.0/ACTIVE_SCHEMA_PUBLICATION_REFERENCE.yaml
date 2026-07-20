@@ -1,0 +1,14 @@
+object_class: ACTIVE_SCHEMA_PUBLICATION_REFERENCE
+version: "2.0.0"
+title: "HRTDB Active_Schema: 존재의 상태와 기준장을 위한 분산 AI 시스템 및 관계형 기억 구조"
+creator: "Lee, Seung"
+version_doi: "10.5281/zenodo.21453793"
+concept_doi: "10.5281/zenodo.21453792"
+citation: "Lee, S. (2026). HRTDB Active_Schema: 존재의 상태와 기준장을 위한 분산 AI 시스템 및 관계형 기억 구조 (Version 2.0.0). Zenodo. https://doi.org/10.5281/zenodo.21453793"
+publication_zip:
+  filename: "0b0317dadfd333c151c9b3f5e4c930d048c76e39fe037914f01ae9767c6d2b30.zip"
+  sha256: "0b0317dadfd333c151c9b3f5e4c930d048c76e39fe037914f01ae9767c6d2b30"
+relation_mirror:
+  repository: SeungeFlow/Relation
+  branch: main
+  path: "06_active_schema/releases/2.0.0/"
