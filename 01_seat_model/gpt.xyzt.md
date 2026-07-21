@@ -1356,3 +1356,87 @@ Current Cycle and Handoff State
 +
 Recovery Position
 ```
+
+<!-- HRTDB_GPT_XYZT_REGISTRY_POINTER_START -->
+## Current Seat-State-Directive Registry Pointer
+
+```yaml
+fixed_position: gpt.xyzt
+fixed_role: OVERALL_COORDINATION
+occupant_identity: VARIABLE
+```
+
+### Minimal Common Grammar
+
+```text
+06_operation/066076253f4c558d357baceddb27ad975f135535199ecc0d3ca3840a51d397de.md
+```
+
+### Adaptive Protocol
+
+```text
+06_operation/9bd5de4d798063868961b13f9c57c437b096962551d001e95ca677dbbe95c518.md
+```
+
+### gpt.xyzt Redesign Exact Object
+
+```text
+06_operation/c66c1cba2f0ec657b79385d943bc18115d6d069461f87047646a45b56b4ba86b.md
+```
+
+### for_instance Address Relation
+
+```text
+03_relation_interface/a75ae037d28966b7013e1c92e7048e2c1ad9bfe1f75a38fde09c9258fea76892.md
+```
+
+### Active_Schema Binding
+
+```text
+09_active_schema_binding/packages/9d6e17d45cdeedaabc317b0255e1b891978518358cc391d82fdcf0878223b08f.zip
+```
+
+### Read Order
+
+```text
+README.md
+→ 01_seat_model/README.md
+→ 01_seat_model/gpt.xyzt.md
+→ 01_seat_model/INSTANCE_GENERATION_INDEX.md
+→ 현재 Stage Seat 문서 1개
+→ Common Directive Exact Object
+→ 필요한 Input Exact Object
+→ 현재 Individual Directive Exact Object
+```
+
+### One Current State
+
+```yaml
+current_state:
+  cycle_subject:
+  stage_id:
+  seat:
+  occupation:
+  one_active_state_value:
+  indexed_object_set:
+  active_individual_directive_exact_hash:
+  anomaly_state:
+  verdict:
+  next_safe_action:
+```
+
+```text
+Output Formed
+≠ Next Stage Authorized
+```
+
+```text
+PASS_TO_NEXT_DIRECTIVE
+CORRECT_CURRENT_STAGE
+HOLD_FOR_MISSING_INPUT
+STOP_CURRENT_CYCLE
+```
+
+지시문 전체 Payload를 이 Stable Surface에 반복하여 누적하지 않는다.
+현재 Exact Hash Object를 가리키고, 과거 변화는 Append-only Event로 보존한다.
+<!-- HRTDB_GPT_XYZT_REGISTRY_POINTER_END -->

@@ -1,0 +1,71 @@
+{
+  "document_type": "INTERNAL_ACTIVE_SCHEMA_PACKAGE_MANIFEST",
+  "semantic_name": "for_instance HRTDB Seat-State-Directive Consolidation",
+  "schema_state": "INTERNAL_DRAFT",
+  "created_at": "2026-07-21",
+  "source_authority": "승이",
+  "coordination_authority": "gpt.logi@gpt.xyzt",
+  "package_root": "Active_Schema/",
+  "github_mutation": false,
+  "deployment_directive": false,
+  "naming_contract": "<sha256_of_exact_bytes>.<extension>",
+  "members": [
+    {
+      "semantic_role": "MASTER_SYNTHESIS",
+      "filename": "8d1b9ea39dce0d0bcf5cae35aca8f444d1870da4b5ecfaa2109b501a8ebda74e.md",
+      "sha256": "8d1b9ea39dce0d0bcf5cae35aca8f444d1870da4b5ecfaa2109b501a8ebda74e",
+      "bytes": 6300,
+      "media_type": "text/markdown"
+    },
+    {
+      "semantic_role": "GPT_XYZT_REDESIGN",
+      "filename": "c66c1cba2f0ec657b79385d943bc18115d6d069461f87047646a45b56b4ba86b.md",
+      "sha256": "c66c1cba2f0ec657b79385d943bc18115d6d069461f87047646a45b56b4ba86b",
+      "bytes": 4918,
+      "media_type": "text/markdown"
+    },
+    {
+      "semantic_role": "ADDRESS_RELATION",
+      "filename": "a75ae037d28966b7013e1c92e7048e2c1ad9bfe1f75a38fde09c9258fea76892.md",
+      "sha256": "a75ae037d28966b7013e1c92e7048e2c1ad9bfe1f75a38fde09c9258fea76892",
+      "bytes": 5821,
+      "media_type": "text/markdown"
+    },
+    {
+      "semantic_role": "MINIMAL_COMMON_GRAMMAR",
+      "filename": "066076253f4c558d357baceddb27ad975f135535199ecc0d3ca3840a51d397de.md",
+      "sha256": "066076253f4c558d357baceddb27ad975f135535199ecc0d3ca3840a51d397de",
+      "bytes": 3727,
+      "media_type": "text/markdown"
+    },
+    {
+      "semantic_role": "ADAPTIVE_PROTOCOL",
+      "filename": "9bd5de4d798063868961b13f9c57c437b096962551d001e95ca677dbbe95c518.md",
+      "sha256": "9bd5de4d798063868961b13f9c57c437b096962551d001e95ca677dbbe95c518",
+      "bytes": 3831,
+      "media_type": "text/markdown"
+    },
+    {
+      "semantic_role": "SEAT_CHANGE_MATRIX",
+      "filename": "f80f3ffbae7242d4bc40421aabd039cb490fb1b7691cb8aa9a399fd3338b4d61.md",
+      "sha256": "f80f3ffbae7242d4bc40421aabd039cb490fb1b7691cb8aa9a399fd3338b4d61",
+      "bytes": 4876,
+      "media_type": "text/markdown"
+    },
+    {
+      "semantic_role": "TRACK_DB_COMPARISON",
+      "filename": "63ab5590a380b98e98601b65edd765d613dfa2a5710a5d7a49aa64ee4038f1c9.md",
+      "sha256": "63ab5590a380b98e98601b65edd765d613dfa2a5710a5d7a49aa64ee4038f1c9",
+      "bytes": 2656,
+      "media_type": "text/markdown"
+    },
+    {
+      "semantic_role": "DEPLOYMENT_PLAN",
+      "filename": "8e5852a7f5aad05c77af207e46ee62e50bce2ec2249e71cfb0d9c2f08f7f4a6d.md",
+      "sha256": "8e5852a7f5aad05c77af207e46ee62e50bce2ec2249e71cfb0d9c2f08f7f4a6d",
+      "bytes": 2801,
+      "media_type": "text/markdown"
+    }
+  ],
+  "next_gate": "REMOTE_REALITY_READBACK_BEFORE_DEPLOYMENT"
+}

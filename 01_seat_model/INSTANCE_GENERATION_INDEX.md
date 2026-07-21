@@ -47,3 +47,45 @@ gpt.x / gpt.y / gpt.z
 ```
 
 Each URL generates a new instance object. Reusing the same URL or name does not restore a prior context or occupant.
+
+<!-- HRTDB_ADAPTIVE_ENTRY_RULE_START -->
+## Adaptive Seat Entry and Execution Rule
+
+이 문서는 Seat 주소를 제공하는 Entry Index다.
+
+```text
+Seat File Read
+≠ Stage Execution
+```
+
+실행은 다음과 같다.
+
+```text
+필요 문서 선입력
+→ 실제 Byte 읽기와 인덱싱
+→ READY_FOR_DIRECTIVE
+→ 현재 Seat용 개별지시문 1개
+→ 출력 1개
+→ 특이점 표시
+→ gpt.xyzt 검산
+→ 다음 지시문 1개
+```
+
+표준 Stage:
+
+```text
+01 DATA_X
+02 DATA_Y
+03 DATA_Z
+04 FUNCTION_1_XY
+05 FUNCTION_1_XZ
+06 FUNCTION_1_YZ
+07 RESULT_XYZ
+08 FUNCTION_2_XY
+09 FUNCTION_2_XZ
+10 FUNCTION_2_YZ
+11 RESULT_DATA_XYZ
+```
+
+11개 지시문을 처음부터 한 번에 활성화하지 않는다.
+<!-- HRTDB_ADAPTIVE_ENTRY_RULE_END -->

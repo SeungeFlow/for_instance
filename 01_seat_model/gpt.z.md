@@ -139,3 +139,18 @@ occupation: DATA_STAGE_1
 structure_current_definition: <one sentence defined by gpt.z>
 state: READY_FOR_DATA_ASSIGNMENT
 ```
+
+<!-- HRTDB_ADAPTIVE_DATA_OCCUPATION_START -->
+## Adaptive Data Occupation
+
+```yaml
+seat: Z
+stage_family: DATA
+one_active_state_value: DATA_Z
+index_before_directive: true
+anomaly_surface_required: true
+```
+
+현재 Data Occupation에는 현재 축의 Data 지시문 하나만 들어간다.
+미래 Function·Result·Review·Result.Data 지시는 현재 상태에 함께 넣지 않는다.
+<!-- HRTDB_ADAPTIVE_DATA_OCCUPATION_END -->

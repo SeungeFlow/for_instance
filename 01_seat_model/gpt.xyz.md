@@ -203,3 +203,28 @@ occupations:
 structure_current_definition: <one sentence defined by gpt.xyz>
 state: READY_FOR_RESULT_ASSIGNMENT
 ```
+
+<!-- HRTDB_RESULT_OCCUPATION_SEPARATION_START -->
+## Result and Result.Data Occupation Separation
+
+```text
+RESULT_XYZ
+→ Function.1.XY + Function.1.XZ + Function.1.YZ의 자리보존 정리
+```
+
+```text
+RESULT_DATA_XYZ
+→ Result + Review.XY + Review.XZ + Review.YZ
+→ Correction Closure
+→ 자리보존 정리
+```
+
+```text
+Result ≠ Result.Data
+Function.2 Review ≠ Result.Data
+Result.Data ≠ Track DB before registration
+```
+
+`RESULT_XYZ`와 `RESULT_DATA_XYZ`는 같은 `gpt.xyz` Seat를 사용하지만,
+한 지시문에서 동시에 활성화하지 않는 서로 다른 Occupation이다.
+<!-- HRTDB_RESULT_OCCUPATION_SEPARATION_END -->

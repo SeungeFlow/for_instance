@@ -24,3 +24,19 @@ Genesis Binding의 정본은 Relation Registry에 생성된다.
 - Version binding: `versions/2.0.0/`
 - Full Architecture mirror: `SeungeFlow/Relation@main:06_active_schema/releases/2.0.0/Active_Schema/`
 <!-- ACTIVE_SCHEMA_V2_VERSION_END -->
+
+<!-- HRTDB_ACTIVE_SCHEMA_BINDING_START -->
+# Active_Schema Binding
+
+```yaml
+semantic_name: for_instance HRTDB Seat-State-Directive Internal Active_Schema
+package_sha256: 9d6e17d45cdeedaabc317b0255e1b891978518358cc391d82fdcf0878223b08f
+package_path: 09_active_schema_binding/packages/9d6e17d45cdeedaabc317b0255e1b891978518358cc391d82fdcf0878223b08f.zip
+manifest_path: 09_active_schema_binding/manifests/34e52a87f2415df139a74c542a2acf3dba19a81281fc7099cada5ea9d4739c33.json
+inventory_path: 09_active_schema_binding/inventory/fdc37d4d8c6d6e8c0a9ef090c4329506e9836f6e669e945ac9dddc41fd6037ea.tsv
+state: INTERNAL_ACTIVE_SCHEMA_DEPLOYED
+```
+
+This directory binds the Exact Package and its unfolded structure assets.
+It does not contain Runtime Result.Data.
+<!-- HRTDB_ACTIVE_SCHEMA_BINDING_END -->

@@ -71,3 +71,43 @@ X, Y, Z, T, XY, XZ, XT, YZ, YT, ZT, XYZ, XYT, XZT, YZT, XYZT
 
 The full Active_Schema body and Track DB payloads are not stored in for_instance.
 <!-- ACTIVE_SCHEMA_V2_BINDING_END -->
+
+<!-- HRTDB_SEAT_STATE_DIRECTIVE_EXTENSION_START -->
+## HRTDB Seat-State-Directive Extension
+
+```text
+for_instance
+=
+Seat + Instance + Capability + Assignment + Handoff + Mutation Authority + History
+를 결속하는 AI Instance Alignment Repository
+```
+
+```text
+공통지시문
+→ 최소 공통문법·Guard·Identity 계약
+→ 단독 실행지시문이 아님
+
+개별 인스턴스 지시문
+→ 수신자 1
+→ Seat 1
+→ Stage 1
+→ Occupation 1
+→ 현재 상태값 1
+→ 직접 입력집합 1
+→ 출력계약 1
+
+Cycle Manifest
+→ 주제·순서·완료·HOLD 기록
+→ 실행지시문이 아님
+```
+
+```text
+문서 업로드·인덱싱
+→ READY_FOR_DIRECTIVE
+→ 개별지시문 1개
+→ 출력
+→ 특이점 표시
+→ gpt.xyzt Gate
+→ 다음 지시문 1개
+```
+<!-- HRTDB_SEAT_STATE_DIRECTIVE_EXTENSION_END -->

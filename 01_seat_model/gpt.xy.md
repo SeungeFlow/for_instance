@@ -192,3 +192,37 @@ occupations:
 structure_current_definition: <one sentence defined by gpt.xy>
 state: READY_FOR_FUNCTION_ASSIGNMENT
 ```
+
+<!-- HRTDB_FUNCTION_PLANAR_BODY_AND_OCCUPATION_START -->
+## Function Planar Body and Occupation Separation
+
+```yaml
+seat: XY
+structural_object: XY_PLANAR_BODY
+active_axes: [X, Y]
+orthogonal_axis: Z
+orthogonal_axis_role: PLANAR_BODY_POSITION_VALUE
+minimum_spatial_unit: CELL
+```
+
+```text
+Function.1.XY
+→ Data.X + Data.Y만 직접입력
+
+Z축 Context
+→ XY 평면체의 위치를 정함
+→ 직접 Function 입력이 아님
+```
+
+```text
+Function.1.XY
+≠
+Function.2.XY
+```
+
+같은 Seat를 재사용하지만 서로 다른 Occupation이며,
+각 Occupation은 별도의 개별지시문과 하나의 현재 상태값을 가진다.
+
+문서 인덱싱 후 `READY_FOR_DIRECTIVE`를 표시하고,
+출력과 함께 특이점을 화면에 표시한다.
+<!-- HRTDB_FUNCTION_PLANAR_BODY_AND_OCCUPATION_END -->

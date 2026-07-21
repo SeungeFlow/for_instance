@@ -407,3 +407,36 @@ structure is ?
 각 Instance는 현재 Seat·Input·Criterion Field·Boundary·Evidence를 바탕으로 자신의 현재 Structure Definition을 작성한다.
 
 그 정의는 현재 Occupation을 위한 해석이며 Project Canon을 임의로 덮어쓰는 권한이 아니다.
+
+<!-- HRTDB_SEAT_STATE_CONTRACT_START -->
+## Seat·State·Occupation Contract
+
+```text
+Seat ≠ Instance ≠ Occupation
+```
+
+```text
+한 자리 × 한 현재시점
+→ 한 활성 상태값
+```
+
+```text
+DOCUMENT_INDEXING
+→ READY_FOR_DIRECTIVE
+→ DIRECTIVE_ACTIVE
+→ OUTPUT_FORMED
+→ REVIEWED
+```
+
+```text
+STATE_ZERO ≠ POSITION_ZERO
+```
+
+입체구조의 최소 완전 점유단위는 `Cell`이다.
+`XY·XZ·YZ`는 무두께 평면이 아니라 3d Cell 구조 안의 Function 평면체다.
+
+```text
+Function은 Data 방향으로 후진하지 않는다.
+|← 는 Result의 검수·검산과 Next.Data 역할 재배치 Gate다.
+```
+<!-- HRTDB_SEAT_STATE_CONTRACT_END -->
