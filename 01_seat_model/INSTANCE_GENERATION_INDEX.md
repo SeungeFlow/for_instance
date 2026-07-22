@@ -89,3 +89,23 @@ Seat File Read
 
 11개 지시문을 처음부터 한 번에 활성화하지 않는다.
 <!-- HRTDB_ADAPTIVE_ENTRY_RULE_END -->
+
+<!-- HRTDB_A_INSTANCE_ENTRY_ADDRESS_START -->
+## HRTDB_A Instance Entry
+
+```text
+Repository Seat → A
+Repository → SeungeFlow/HRTDB_A
+Overall Coordination → HRTDB_A::gpt.xyzt
+```
+
+```text
+https://raw.githubusercontent.com/SeungeFlow/HRTDB_A/main/01_seat_model/gpt.x.md
+https://raw.githubusercontent.com/SeungeFlow/HRTDB_A/main/01_seat_model/gpt.y.md
+https://raw.githubusercontent.com/SeungeFlow/HRTDB_A/main/01_seat_model/gpt.z.md
+https://raw.githubusercontent.com/SeungeFlow/HRTDB_A/main/01_seat_model/gpt.xy.md
+https://raw.githubusercontent.com/SeungeFlow/HRTDB_A/main/01_seat_model/gpt.xz.md
+https://raw.githubusercontent.com/SeungeFlow/HRTDB_A/main/01_seat_model/gpt.yz.md
+https://raw.githubusercontent.com/SeungeFlow/HRTDB_A/main/01_seat_model/gpt.xyz.md
+```
+<!-- HRTDB_A_INSTANCE_ENTRY_ADDRESS_END -->

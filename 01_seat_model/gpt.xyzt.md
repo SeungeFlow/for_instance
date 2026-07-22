@@ -1440,3 +1440,27 @@ STOP_CURRENT_CYCLE
 지시문 전체 Payload를 이 Stable Surface에 반복하여 누적하지 않는다.
 현재 Exact Hash Object를 가리키고, 과거 변화는 Append-only Event로 보존한다.
 <!-- HRTDB_GPT_XYZT_REGISTRY_POINTER_END -->
+
+<!-- HRTDB_A_POST_RENAME_ADDRESS_START -->
+## HRTDB_A Post-Rename Direct Addresses
+
+```yaml
+repository_seat_code: A
+repository: SeungeFlow/HRTDB_A
+branch: main
+seat_code_is_immutable: true
+```
+
+```text
+https://raw.githubusercontent.com/SeungeFlow/HRTDB_A/main/README.md
+https://raw.githubusercontent.com/SeungeFlow/HRTDB_A/main/01_seat_model/gpt.xyzt.md
+https://raw.githubusercontent.com/SeungeFlow/HRTDB_A/main/01_seat_model/INSTANCE_GENERATION_INDEX.md
+https://raw.githubusercontent.com/SeungeFlow/HRTDB_A/main/06_operation/ab8a7aad4cefd83a4b1dbc2ad286f05042cf07473e42c002e7090b77bfd6f8c5.A.md
+https://raw.githubusercontent.com/SeungeFlow/HRTDB_A/main/08_history/9fe45a23b8a48db72ba7d0959aed2a91a6e7d0fa49ebbfad5ea018b99e58b015.A.md
+```
+
+```text
+Repository given name may change.
+Repository family-name Seat Code A continues.
+```
+<!-- HRTDB_A_POST_RENAME_ADDRESS_END -->

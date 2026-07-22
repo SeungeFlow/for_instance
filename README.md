@@ -111,3 +111,45 @@ Cycle Manifest
 → 다음 지시문 1개
 ```
 <!-- HRTDB_SEAT_STATE_DIRECTIVE_EXTENSION_END -->
+
+<!-- HRTDB_A_ROOT_DEFINITION_START -->
+## HRTDB_A
+
+```text
+HRTDB
+=
+Track DB 기반 지식자산 형성 DB Engine
+```
+
+```yaml
+repository_seat:
+  code: A
+  current_name: HRTDB_A
+  given_name: HRTDB
+  family_name_seat_code: A
+  former_name: for_instance
+  inherited_across_repository_rename: true
+  seat_code_is_immutable: true
+```
+
+```text
+1d → 2d → 3d → 2d → 3d
+Data → Function → Result → Function → Result.Data
+Result.Data → 등록 Gate → Track DB
+```
+
+```text
+Track DB is not Hash DB.
+Knowledge Asset is not Analysis Asset.
+```
+
+```text
+LRSDoNet_B → Hash DB 분석·응용 DB System
+Principle_C → 구조원리·공통문법·분석기준 Data자산
+```
+
+```text
+Canonical Exact Object Filename:
+<sha256>.A.<extension>
+```
+<!-- HRTDB_A_ROOT_DEFINITION_END -->
